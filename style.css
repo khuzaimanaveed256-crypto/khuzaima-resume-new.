@@ -976,3 +976,36 @@ footer {
         font-size: 1.6rem;
     }
 }
+@media (max-width: 600px) {
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 10px;
+  }
+
+  .skill-card {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .skill-card i {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+}@media (max-width: 600px) {
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 10px;
+  }
+
+  .skill-card {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .skill-card i {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  
