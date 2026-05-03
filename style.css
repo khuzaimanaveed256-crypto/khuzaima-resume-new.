@@ -121,3 +121,63 @@ body {
         padding: 20px;
     }
 }
+/* ===== SAFE OVERRIDE FIX (DO NOT DELETE OLD CSS) ===== */
+
+/* Prevent huge elements */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Fix all cards/boxes scaling */
+.card,
+.service-card,
+.skill-card,
+.project-card,
+.glass {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Fix section overflow */
+section {
+    overflow: hidden;
+}
+
+/* Prevent text/images going out */
+* {
+    max-width: 100%;
+}
+
+/* HERO IMAGE FIX */
+.profile-container {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+}
+
+/* GRID SAFETY */
+.skills-grid,
+.services-grid,
+.projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+/* MOBILE FIX STRONG */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .profile-container {
+        max-width: 240px;
+    }
+
+    .skills-grid,
+    .services-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
