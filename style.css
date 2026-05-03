@@ -1130,3 +1130,32 @@ footer {
         padding: 20px;
     }
 }
+/* ===== FIX: Mobile Cut Issue ===== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.contact-box,
+.card,
+.box {
+  width: 100%;
+  max-width: 100%;
+  padding: 15px;
+}
+
+/* Agar kahin 100vw use ho raha ho to fix */
+section, div {
+  max-width: 100%;
+}
