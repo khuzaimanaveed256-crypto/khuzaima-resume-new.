@@ -1163,3 +1163,37 @@ html, body {
   width: 100%;
   overflow-x: hidden;
 }
+/* ===== PERFECT CENTER SPACING FIX ===== */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;        /* center karega */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Har section ko same spacing */
+section {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Contact boxes fix */
+.contact-box {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Mobile ke liye */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
