@@ -1,125 +1,89 @@
-/* ===== MOBILE PERFECT SIZE SYSTEM ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap');
 
-@media (max-width: 768px) {
-
-  /* Sections spacing */
-  section {
-    padding: 50px 15px !important;
-  }
-
-  /* Headings */
-  h1 {
-    font-size: 2rem !important;
-  }
-
-  h2 {
-    font-size: 1.6rem !important;
-  }
-
-  h3 {
-    font-size: 1.2rem !important;
-  }
-
-  /* Cards (MAIN FIX) */
-  .skill-card,
-  .service-card,
-  .project-card,
-  .glass {
-    width: 100% !important;
-    padding: 14px !important;
-    border-radius: 12px !important;
-  }
-
-  /* Grids → single column */
-  .skills-grid,
-  .services-grid,
-  .projects-grid {
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-  }
-
-  /* Hero image */
-  .profile-container {
-    width: 220px !important;
-    height: 220px !important;
-    margin: auto;
-  }
-
-  /* Buttons */
-  .btn {
-    width: 100% !important;
-    justify-content: center;
-    font-size: 14px !important;
-    padding: 10px 14px !important;
-  }
-
-  /* Text spacing */
-  p {
-    font-size: 14px !important;
-    line-height: 1.6;
-  }
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-/* ===== FINAL RESET + COLOR + SIZE FIX ===== */
 
-/* BACKGROUND FIX (white issue solve) */
 body {
-    background-color: #050505 !important;
-    color: #f8fafc !important;
+    background: #050505;
+    color: #f8fafc;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
 }
 
-/* FORCE DARK CARDS */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+/* HERO */
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+/* TEXT */
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.3rem; }
+p  { font-size: 14px; line-height: 1.6; }
+
+/* CARDS */
 .glass,
-.card,
 .skill-card,
 .service-card,
 .project-card {
-    background: rgba(15, 15, 20, 0.75) !important;
-    color: #f8fafc !important;
+    background: rgba(15, 15, 20, 0.75);
+    border-radius: 12px;
+    padding: 15px;
 }
 
-/* TEXT SIZE FIX */
-h1 { font-size: 2.2rem !important; }
-h2 { font-size: 1.7rem !important; }
-h3 { font-size: 1.3rem !important; }
-p  { font-size: 14px !important; }
-
-/* HERO IMAGE FIX */
-.profile-container {
-    width: 220px !important;
-    height: 220px !important;
-}
-
-/* GRID SMALL + CLEAN */
+/* GRID */
 .skills-grid,
 .services-grid,
 .projects-grid {
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
 }
 
-/* CARD SIZE FIX (SMALLER) */
-.skill-card,
-.service-card,
-.project-card {
-    padding: 12px !important;
-    border-radius: 12px !important;
+/* IMAGE */
+.profile-container {
+    width: 220px;
+    height: 220px;
 }
 
-/* BUTTON FIX */
+/* BUTTON */
 .btn {
-    width: 100% !important;
-    font-size: 14px !important;
-    padding: 10px !important;
+    padding: 10px 14px;
+    font-size: 14px;
 }
 
-/* SECTION SPACING CONTROL */
+/* SECTIONS */
 section {
-    padding: 50px 15px !important;
+    padding: 60px 15px;
 }
 
-/* PREVENT OVERFLOW */
-* {
-    max-width: 100%;
-    box-sizing: border-box;
+/* MOBILE */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .skills-grid,
+    .services-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-container {
+        width: 200px;
+        height: 200px;
+    }
 }
