@@ -181,3 +181,46 @@ section {
         grid-template-columns: 1fr;
     }
 }
+/* ===== FINAL COMPACT UI FIX ===== */
+
+/* Reduce overall scale */
+body {
+    font-size: 15px;
+}
+
+/* Make all headings smaller & balanced */
+h1 { font-size: 2.2rem !important; }
+h2 { font-size: 1.8rem !important; }
+h3 { font-size: 1.3rem !important; }
+
+/* Make cards compact */
+.card,
+.service-card,
+.skill-card,
+.project-card {
+    padding: 15px !important;
+    border-radius: 12px;
+}
+
+/* Reduce grid gap */
+.skills-grid,
+.services-grid,
+.projects-grid {
+    gap: 12px !important;
+}
+
+/* FIX HERO IMAGE SIZE */
+.profile-container {
+    max-width: 220px !important;
+}
+
+/* Buttons smaller */
+.btn {
+    padding: 10px 16px !important;
+    font-size: 14px !important;
+}
+
+/* Prevent huge spacing */
+section {
+    padding: 50px 0 !important;
+}
