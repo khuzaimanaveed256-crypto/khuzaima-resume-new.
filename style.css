@@ -1,226 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap');
+/* ===== MOBILE PERFECT SIZE SYSTEM ===== */
 
-:root {
-    --bg-dark: #050505;
-    --bg-card: rgba(15, 15, 20, 0.7);
-    --primary: #4f46e5;
-    --primary-glow: rgba(79, 70, 229, 0.4);
-    --secondary: #9333ea;
-    --secondary-glow: rgba(147, 51, 234, 0.4);
-    --accent: #3b82f6;
-    --text-main: #f8fafc;
-    --text-muted: #94a3b8;
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --glass-bg: rgba(255, 255, 255, 0.03);
-    --transition: all 0.4s ease;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-html, body {
-    width: 100%;
-    overflow-x: hidden;
-}
-
-body {
-    background: var(--bg-dark);
-    color: var(--text-main);
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-}
-
-/* ===== CONTAINER ===== */
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
-}
-
-/* ===== GLASS ===== */
-.glass {
-    background: var(--glass-bg);
-    backdrop-filter: blur(12px);
-    border: 1px solid var(--glass-border);
-    border-radius: 1.5rem;
-}
-
-/* ===== HERO IMAGE FIX ===== */
-.profile-container {
-    width: 100%;
-    max-width: 400px;
-    margin: auto;
-}
-
-/* ===== SKILLS GRID FIX ===== */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 15px;
-}
-
-.skill-card {
-    padding: 15px;
-    text-align: center;
-    border: 1px solid var(--glass-border);
-    transition: var(--transition);
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
-}
-
-/* ===== CONTACT SECTION CLEAN FIX ===== */
-.contact-section {
-    width: 100%;
-    padding: 60px 20px;
-    display: flex;
-    justify-content: center;
-    background: #0f172a;
-}
-
-.contact-box {
-    width: 100%;
-    max-width: 500px;
-    background: #1e293b;
-    padding: 25px;
-    border-radius: 12px;
-    text-align: center;
-}
-
-/* ===== BUTTON ===== */
-.contact-btn {
-    display: inline-block;
-    padding: 10px 18px;
-    background: #38bdf8;
-    color: #000;
-    border-radius: 8px;
-    text-decoration: none;
-}
-
-/* ===== MOBILE FIX ===== */
 @media (max-width: 768px) {
 
-    .container {
-        padding: 0 15px;
-    }
+  /* Sections spacing */
+  section {
+    padding: 50px 15px !important;
+  }
 
-    .hero h1 {
-        font-size: 2.2rem;
-    }
+  /* Headings */
+  h1 {
+    font-size: 2rem !important;
+  }
 
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  h2 {
+    font-size: 1.6rem !important;
+  }
 
-    .contact-box {
-        padding: 20px;
-    }
-}
-/* ===== SAFE OVERRIDE FIX (DO NOT DELETE OLD CSS) ===== */
+  h3 {
+    font-size: 1.2rem !important;
+  }
 
-/* Prevent huge elements */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
+  /* Cards (MAIN FIX) */
+  .skill-card,
+  .service-card,
+  .project-card,
+  .glass {
+    width: 100% !important;
+    padding: 14px !important;
+    border-radius: 12px !important;
+  }
 
-/* Fix all cards/boxes scaling */
-.card,
-.service-card,
-.skill-card,
-.project-card,
-.glass {
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-}
-
-/* Fix section overflow */
-section {
-    overflow: hidden;
-}
-
-/* Prevent text/images going out */
-* {
-    max-width: 100%;
-}
-
-/* HERO IMAGE FIX */
-.profile-container {
-    max-width: 320px;
-    width: 100%;
-    height: auto;
-}
-
-/* GRID SAFETY */
-.skills-grid,
-.services-grid,
-.projects-grid {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-}
-
-/* MOBILE FIX STRONG */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .profile-container {
-        max-width: 240px;
-    }
-
-    .skills-grid,
-    .services-grid,
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-}
-/* ===== FINAL COMPACT UI FIX ===== */
-
-/* Reduce overall scale */
-body {
-    font-size: 15px;
-}
-
-/* Make all headings smaller & balanced */
-h1 { font-size: 2.2rem !important; }
-h2 { font-size: 1.8rem !important; }
-h3 { font-size: 1.3rem !important; }
-
-/* Make cards compact */
-.card,
-.service-card,
-.skill-card,
-.project-card {
-    padding: 15px !important;
-    border-radius: 12px;
-}
-
-/* Reduce grid gap */
-.skills-grid,
-.services-grid,
-.projects-grid {
+  /* Grids → single column */
+  .skills-grid,
+  .services-grid,
+  .projects-grid {
+    grid-template-columns: 1fr !important;
     gap: 12px !important;
-}
+  }
 
-/* FIX HERO IMAGE SIZE */
-.profile-container {
-    max-width: 220px !important;
-}
+  /* Hero image */
+  .profile-container {
+    width: 220px !important;
+    height: 220px !important;
+    margin: auto;
+  }
 
-/* Buttons smaller */
-.btn {
-    padding: 10px 16px !important;
+  /* Buttons */
+  .btn {
+    width: 100% !important;
+    justify-content: center;
     font-size: 14px !important;
-}
+    padding: 10px 14px !important;
+  }
 
-/* Prevent huge spacing */
-section {
-    padding: 50px 0 !important;
+  /* Text spacing */
+  p {
+    font-size: 14px !important;
+    line-height: 1.6;
+  }
+
 }
